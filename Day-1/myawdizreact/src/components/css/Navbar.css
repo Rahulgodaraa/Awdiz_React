@@ -1,0 +1,23 @@
+.Parentdiv{
+    display: flex;
+    justify-content: space-around;
+    background-color: aqua;
+    color: black;
+    
+}
+
+.Parentdiv h1{
+    border: 2px solid gray;
+    padding: 10px 10px ;
+    background-color: rgba(255, 255, 255, 0.555);
+}
+
+.ParentCounter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.ParentCounter h1 {
+}
