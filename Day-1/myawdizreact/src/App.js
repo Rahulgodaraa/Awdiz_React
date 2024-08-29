@@ -10,8 +10,23 @@ import UseEffect1 from './components/23-08/UseEffect1';
 import UseEffect2 from './components/23-08/UseEffect2';
  import UseEffect3 from './components/23-08/UseEffect3';
 import UseEffect4 from './components/23-08/UseEffect4';
+import UseParams from './components/25-08/UseParams';
+import PropDrilling from './components/25-08/PropDrilling';
+import { useState } from 'react';
+import Mapping from './components/25-08/Mapping';
+import Todo from './components/25-08/Todo';
 
 function App() {
+
+  // const [std , setStd] = useState(["a","a","a","a","a"])
+
+  const [prod ,setProd] = useState([{} , {} , {}])
+
+  const [count , setCount] = useState(1);
+  function Increment(){
+    setCount(count+1);
+  }
+
   return (
     <>
     <Navbar/>
@@ -24,6 +39,16 @@ function App() {
       <Route path='/useEffect2' element= {<UseEffect2/> }/>
       <Route path='/useEffect3' element= {<UseEffect3/> }/>
       <Route path='/useEffect4' element= {<UseEffect4/> }/>
+      <Route path='/product/:id' element = {<UseParams/>}/>
+      <Route path='/PropDrilling' element = {<PropDrilling students = {["v", "R" ,"A"]}
+      counter = {count}
+      increm = {Increment}
+      />}/>
+      <Route path='/mapping' element = {<Mapping />}/>
+      <Route path='/todo'    element = {<Todo/>}/>
+
+      
+
 
 
 

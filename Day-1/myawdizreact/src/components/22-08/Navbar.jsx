@@ -33,6 +33,11 @@ function routeTouseEffect3(){
 function routeTouseEffect4(){
    router("/useEffect4")
 }
+
+function routeToTodo(){
+   router("/todo")
+
+}
   return (
     <div className="Parentdiv">
         <h1 onClick={routeToHome}>Home</h1>
@@ -43,6 +48,7 @@ function routeTouseEffect4(){
         <h1 onClick={routeTouseEffect2}>useEffect2</h1>
         <h1 onClick={routeTouseEffect3}>useEffect3</h1>
         <h1 onClick={routeTouseEffect4}>useEffect4</h1>
+        <h1 onClick={routeToTodo}>Todo</h1>
 
 
 
