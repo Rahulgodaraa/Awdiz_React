@@ -19,4 +19,32 @@
     
 }
 
+ .active {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+ }
+
+ .not-active {
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+ }
+
+ .RegisterParent  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid red;
+    width : 50%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 50px 10px ;
+    background-color: blanchedalmond;
+    
+ }
  
+ form{
+    line-height: 30px;
+ }

@@ -15,6 +15,10 @@ import PropDrilling from './components/25-08/PropDrilling';
 import { useState } from 'react';
 import Mapping from './components/25-08/Mapping';
 import Todo from './components/25-08/Todo';
+import Registeration from './components/30-08/Registeration';
+import DynamicCss from './components/30-08/DynamicCss';
+ 
+
 
 function App() {
 
@@ -46,6 +50,10 @@ function App() {
       />}/>
       <Route path='/mapping' element = {<Mapping />}/>
       <Route path='/todo'    element = {<Todo/>}/>
+      <Route path='/Registeration' element = {<Registeration/>}/>
+      <Route path='/DynamicCss' element = {<DynamicCss/>}/>
+
+       
 
       
 
