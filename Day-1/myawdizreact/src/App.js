@@ -17,6 +17,7 @@ import Mapping from './components/25-08/Mapping';
 import Todo from './components/25-08/Todo';
 import Registeration from './components/30-08/Registeration';
 import DynamicCss from './components/30-08/DynamicCss';
+import Reducer from './components/04-09/Reducer';
  
 
 
@@ -52,13 +53,9 @@ function App() {
       <Route path='/todo'    element = {<Todo/>}/>
       <Route path='/Registeration' element = {<Registeration/>}/>
       <Route path='/DynamicCss' element = {<DynamicCss/>}/>
+      <Route path='/Reducer' element = {<Reducer/>}/>
 
-       
-
-      
-
-
-
+     
 
 
 

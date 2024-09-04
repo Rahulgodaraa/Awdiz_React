@@ -13,7 +13,7 @@ const Navbar = () => {
         router("/login")
      }
      function routeToRegister(){
-      router("/register")
+      router("/Registeration")
    }
    function routeToCounter(){
     router("/counter")

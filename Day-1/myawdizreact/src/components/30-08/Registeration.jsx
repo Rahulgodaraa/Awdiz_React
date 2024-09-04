@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import   "../css/Navbar.css"
 import toast from 'react-hot-toast'
+import { useNavigate } from 'react-router-dom'
 
 
 const Registeration = () => {
+
+  const router = useNavigate();
 
   const [userdata , setUserdata] = useState([
     {
@@ -34,6 +37,7 @@ const Registeration = () => {
  
       if(response.data.success) {
         toast.success(response.data.message);
+        router('/login');
       }
       }
      catch (error) {
@@ -48,7 +52,7 @@ const Registeration = () => {
   return (
     <div className='RegisterParent'>
         <form onSubmit={handleSubmit} action="">
-            <h1>Registeration form</h1>
+            <h1>Registeration Page</h1>
             <label htmlFor="">Name : </label><br/>
             <input onChange={handleInput}
              type="text" 
