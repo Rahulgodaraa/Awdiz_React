@@ -20,7 +20,6 @@ import DynamicCss from './components/30-08/DynamicCss';
 import Reducer from './components/04-09/Reducer';
  
 
-
 function App() {
 
   // const [std , setStd] = useState(["a","a","a","a","a"])
@@ -54,6 +53,8 @@ function App() {
       <Route path='/Registeration' element = {<Registeration/>}/>
       <Route path='/DynamicCss' element = {<DynamicCss/>}/>
       <Route path='/Reducer' element = {<Reducer/>}/>
+     
+
 
      
 

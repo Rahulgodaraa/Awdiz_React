@@ -71,4 +71,24 @@
 
  }
 
- 
+ .ParentHome {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 40%;
+   margin: auto;
+   margin-top: 200px;
+   height: 300px;
+   border-radius: 30px;
+   background-color: aquamarine;
+  flex-direction: column;
+   
+ }
+
+ .ParentHome button{
+   background-color: rgb(46, 92, 77);
+   color: aliceblue;
+   padding: 20px;
+   margin: 10px;
+
+ }

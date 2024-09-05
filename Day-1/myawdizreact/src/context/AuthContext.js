@@ -1,0 +1,31 @@
+import {createContext, useReducer} from 'react'
+ 
+
+export const AuthContext = createContext();
+
+ const  Reducer = (state , action) => {
+    switch(action.type) {
+        case "DarkMode" : 
+        return {...state , mode : "dark"}
+        case "LightMode" : 
+        return {...state , mode : "light"}
+        case 'Increment' : 
+        return { ...state ,counter : state.counter + 1  }
+        default : 
+        return state
+    }
+ }
+
+  const InitialState = {counter : 0 , mode : 'light'}
+
+ function ParentAuthComponent( {children }) {
+    const [state , dispatch] = useReducer( Reducer , InitialState );
+
+    return (
+        <AuthContext.Provider value = {{ state , dispatch }}>
+            {children}
+        </AuthContext.Provider>
+    )
+ }
+
+ export default ParentAuthComponent;
