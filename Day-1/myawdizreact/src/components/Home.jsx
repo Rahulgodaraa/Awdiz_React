@@ -1,10 +1,11 @@
 import React, { useContext } from 'react'
 import { AuthContext } from '../context/AuthContext';
 import "../components/css/Navbar.css"
+import { Overallcontext } from './11-09/OverallTheme';
 
 const Home = () => {
 
-  const {state , dispatch} = useContext(AuthContext);
+  const {state , dispatch} = useContext(Overallcontext);
 
 
   function Increment() {
@@ -13,10 +14,10 @@ const Home = () => {
 
 function themeChange() {
   if(state.mode == 'light') {
-     dispatch({type : 'DarkMode'})
+     dispatch({type : 'Dark'})
   
 } else  {
-  dispatch({type : 'LightMode'})
+  dispatch({type : 'Light'})
 }
 
 }

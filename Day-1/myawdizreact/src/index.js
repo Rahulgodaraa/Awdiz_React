@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
 import { Toaster } from 'react-hot-toast';
 import ParentAuthComponent from "./context/AuthContext";
+import ParentOverallTheme from "./components/11-09/OverallTheme";
+import ParentOverallThemeComponent from "./components/11-09/OverallTheme";
  
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -37,9 +39,9 @@ root.render(
           },
         }}
       />
-   <ParentAuthComponent>
+      <ParentOverallThemeComponent>
       <App />
-      </ParentAuthComponent>
+      </ParentOverallThemeComponent>
    
     </BrowserRouter>
   </React.StrictMode>
