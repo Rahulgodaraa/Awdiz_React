@@ -20,6 +20,7 @@ import DynamicCss from './components/30-08/DynamicCss';
 import Reducer from './components/04-09/Reducer';
 import UseMemo from './components/05-09/UseMemo';
 import ParentMemo from './components/11-09/ParentMemo';
+import TodoPractice from './Practice/TodoPractice';
  
 
 function App() {
@@ -52,20 +53,13 @@ function App() {
       />}/>
       <Route path='/mapping' element = {<Mapping />}/>
       <Route path='/todo'    element = {<Todo/>}/>
-      <Route path='/Registeration' element = {<Registeration/>}/>
+      <Route path='/Registeration' element = {<Registeration/>}/> //usenav
       <Route path='/DynamicCss' element = {<DynamicCss/>}/>
       <Route path='/Reducer' element = {<Reducer/>}/>
       <Route path='/Usememo' element = {<UseMemo/>}/>
       <Route path='/memo' element = {<ParentMemo/>}/>
-
-
-     
-
-
-     
-
-
-
+      <Route path='/todoPractice' element = {<TodoPractice/>}/>
+      
     </Routes>
     </>
   );
