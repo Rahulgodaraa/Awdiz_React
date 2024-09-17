@@ -21,6 +21,7 @@ import Reducer from './components/04-09/Reducer';
 import UseMemo from './components/05-09/UseMemo';
 import ParentMemo from './components/11-09/ParentMemo';
 import TodoPractice from './Practice/TodoPractice';
+import UseRef from './components/15-09/UseRef';
  
 
 function App() {
@@ -38,7 +39,7 @@ function App() {
     <>
     <Navbar/>
     <Routes>
-      <Route path="/" element = {<Home />} />
+      <Route path="/" element = {<Home />} />s
       <Route path="/login" element = {<Login />} />
       <Route path="/register" element = {<Register />} />
       <Route path='/counter' element= {<Counter/> }/>
@@ -59,6 +60,8 @@ function App() {
       <Route path='/Usememo' element = {<UseMemo/>}/>
       <Route path='/memo' element = {<ParentMemo/>}/>
       <Route path='/todoPractice' element = {<TodoPractice/>}/>
+      <Route path='/UseRef' element = {<UseRef/>}/>
+
       
     </Routes>
     </>
