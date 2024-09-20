@@ -6,7 +6,7 @@ const UseRef = () => {
 
   const counterRef = useRef(10);
   console.log(counterRef.current, "counterRef");
-
+ 
   function IncrementRef() {
     counterRef.current++;
     console.log(counterRef.current, "counterRef.current");

@@ -22,6 +22,8 @@ import UseMemo from './components/05-09/UseMemo';
 import ParentMemo from './components/11-09/ParentMemo';
 import TodoPractice from './Practice/TodoPractice';
 import UseRef from './components/15-09/UseRef';
+import UseCallback from './components/15-09/UseCallback';
+import FakestoreApi from './components/14-09/FakestoreApi';
  
 
 function App() {
@@ -61,6 +63,10 @@ function App() {
       <Route path='/memo' element = {<ParentMemo/>}/>
       <Route path='/todoPractice' element = {<TodoPractice/>}/>
       <Route path='/UseRef' element = {<UseRef/>}/>
+      <Route path='/UseCallback' element = {<UseCallback/>}/>
+      <Route path='/FakestoreApi' element = {<FakestoreApi/>}/>
+
+
 
       
     </Routes>
