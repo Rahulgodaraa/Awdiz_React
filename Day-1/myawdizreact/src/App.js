@@ -20,10 +20,11 @@ import DynamicCss from './components/30-08/DynamicCss';
 import Reducer from './components/04-09/Reducer';
 import UseMemo from './components/05-09/UseMemo';
 import ParentMemo from './components/11-09/ParentMemo';
-import TodoPractice from './Practice/TodoPractice';
-import UseRef from './components/15-09/UseRef';
-import UseCallback from './components/15-09/UseCallback';
+// import TodoPractice from './Practice/TodoPractice';
+// import UseRef from './components/15-09/UseRef';
+// import UseCallback from './components/15-09/UseCallback';
 import FakestoreApi from './components/14-09/FakestoreApi';
+import Redux from './components/19-09/Redux';
  
 
 function App() {
@@ -61,10 +62,12 @@ function App() {
       <Route path='/Reducer' element = {<Reducer/>}/>
       <Route path='/Usememo' element = {<UseMemo/>}/>
       <Route path='/memo' element = {<ParentMemo/>}/>
-      <Route path='/todoPractice' element = {<TodoPractice/>}/>
-      <Route path='/UseRef' element = {<UseRef/>}/>
-      <Route path='/UseCallback' element = {<UseCallback/>}/>
+      {/* <Route path='/todoPractice' element = {<TodoPractice/>}/> */}
+      {/* <Route path='/UseRef' element = {<UseRef/>}/>
+      <Route path='/UseCallback' element = {<UseCallback/>}/> */}
       <Route path='/FakestoreApi' element = {<FakestoreApi/>}/>
+      <Route path='/Redux' element = {<Redux/>}/>
+
 
 
 
