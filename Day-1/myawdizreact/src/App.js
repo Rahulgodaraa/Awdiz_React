@@ -57,7 +57,7 @@ function App() {
       />}/>
       <Route path='/mapping' element = {<Mapping />}/>
       <Route path='/todo'    element = {<Todo/>}/>
-      <Route path='/Registeration' element = {<Registeration/>}/> //usenav
+      {/* <Route path='/Registeration' element = {<Registeration/>}/> //usenav */}
       <Route path='/DynamicCss' element = {<DynamicCss/>}/>
       <Route path='/Reducer' element = {<Reducer/>}/>
       <Route path='/Usememo' element = {<UseMemo/>}/>

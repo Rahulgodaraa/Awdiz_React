@@ -9,7 +9,7 @@ const Home = () => {
 
 
   function Increment() {
-    dispatch({type : "Increment"});
+    dispatch({type : "Increment" , payload: 'lightmode'});
   }
 
 function themeChange() {
@@ -32,8 +32,7 @@ function themeChange() {
       <h1>Home</h1>
       <h2>Counter : {state?.counter}</h2>
       <button onClick={Increment}>+</button>
-     
-
+    
     </div>
   )
 }
