@@ -5,7 +5,7 @@ import { Overallcontext } from './11-09/OverallTheme';
 
 const Home = () => {
 
-  const {state , dispatch} = useContext(Overallcontext);
+  const {state , dispatch} = useContext(AuthContext);
 
 
   function Increment() {
@@ -31,6 +31,8 @@ function themeChange() {
       <button onClick={themeChange}>Theme Change</button>
       <h1>Home</h1>
       <h2>Counter : {state?.counter}</h2>
+      <h2>USer : {state?.user?.name}</h2>
+
       <button onClick={Increment}>+</button>
     
     </div>

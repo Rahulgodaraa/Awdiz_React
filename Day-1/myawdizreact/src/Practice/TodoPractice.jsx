@@ -99,7 +99,7 @@
 // */
 // import React, { useState } from 'react'
 
-// const UserData = {
+// const userData = {
 //   name : '',
 //   email: '',
 //   password : '',
@@ -107,7 +107,7 @@
 // }
 // //  
 
-// const [userdata , setUserdata] = useState({})
+// const [userData , setuserData] = useState({})
 
 
 // const TodoPractice = () => {

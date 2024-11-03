@@ -8,50 +8,49 @@ const Register = () => {
   
   const router = useNavigate();
 
-  const [userdata , setUserdata] = useState([
+  const [userData , setuserData] = useState(
     {
       name : '',
       email: '',
       password: '',
       confirmpassword: ''
     }
-  ])
+  )
 
   function handleInput(event){
-    setUserdata({...userdata , [event.target.name]: event.target.value})
-    console.log(userdata);
+    setuserData({...userData , [event.target.name]: event.target.value})
+    console.log(userData);
     
   }
 
   async function  handleSubmit(event){
     event.preventDefault();
-    if (userdata.name && userdata.email && userdata.password && userdata.confirmpassword){
-      if (userdata.password !== userdata.confirmpassword) {
-        toast.error("Password does not match");
-      } else {
+    if (userData.name && userData.email && userData.password && userData.confirmpassword){
+      if (userData.password !== userData.confirmpassword) {
+       return toast.error("Password does not match");
+      } 
     try {
 
-
-      let response = await api.post('/auth/register' , { userdata });
-      
+      const { name, email, password , confirmpassword } = userData;
+      const response = await api.post('/auth/Register' , { userData : {name , email , password , confirmpassword} });
+       console.log(response);
        
-
-       response = {
-        data : {success : true , message : "Registeration Success"}
-      }
  
       if(response.data.success) {
         toast.success(response.data.message);
         router('/login');
+      } else {
+        toast.error(response.data.message)
+      console.log(response.data.message);
+
       }
-      }
-     catch (error) {
+     } catch (error) {
       toast.error('Registeration unSuccess')
+ 
+       }
+    } else {
+      toast.error("all field front")
     }
-  }
-  } else {
-    toast.error("All fields are required");
-  }
   }
 
   return (
@@ -73,7 +72,7 @@ const Register = () => {
             <input onChange={handleInput} type="password" name='password' placeholder='Type your password...' /><br/>
             <label htmlFor="">Confirm Password :</label><br/>
             <input onChange={handleInput} type="password" name='confirmpassword' placeholder='Type your password...' /><br/>
-            <button>Register</button>
+            <input type="submit" value="Register" />
         </form> 
     </div>
   )

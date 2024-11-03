@@ -10,7 +10,6 @@ import ParentOverallTheme from "./components/11-09/OverallTheme";
 import ParentOverallThemeComponent from "./components/11-09/OverallTheme";
 import {Provider} from 'react-redux'
 import store from "./components/Redux/store";
- 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -42,9 +41,11 @@ root.render(
           },
         }}
       />
+      <ParentAuthComponent>
       <ParentOverallThemeComponent>
       <App />
       </ParentOverallThemeComponent>
+      </ParentAuthComponent>
    
     </BrowserRouter>
     </Provider>

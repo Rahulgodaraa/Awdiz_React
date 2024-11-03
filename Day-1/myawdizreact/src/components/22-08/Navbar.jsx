@@ -2,10 +2,11 @@ import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/Navbar.css";
 import { Overallcontext } from "../11-09/OverallTheme";
+import { AuthContext } from "../../context/AuthContext";
 
 const Navbar = () => {
 
-  const {state, dispatch} = useContext(Overallcontext);
+  const {state, dispatch} = useContext(AuthContext);
 
   const router = useNavigate();
 
@@ -17,7 +18,7 @@ const Navbar = () => {
     router("/login");
   }
   function routeToRegister() {
-    router("/Registeration");
+    router("/Register");
   }
   function routeToCounter() {
     router("/counter");
@@ -59,6 +60,7 @@ const Navbar = () => {
       <h1 onClick={routeToLogin}>Login</h1>
       <h1 onClick={routeToRegister}>Register</h1>
       <h1 onClick={routeToCounter}>Counter:</h1>
+      <h1 onClick={routeTouseEffect1}>{state?.user?.name}</h1>
       <h1 onClick={routeTouseEffect1}>useEffect1</h1>
       <h1 onClick={routeTouseEffect2}>useEffect2</h1>
       <h1 onClick={routeTouseEffect3}>useEffect3</h1>

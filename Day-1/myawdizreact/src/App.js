@@ -15,7 +15,7 @@ import PropDrilling from './components/25-08/PropDrilling';
 import { useState } from 'react';
 import Mapping from './components/25-08/Mapping';
 import Todo from './components/25-08/Todo';
-import Registeration from './components/30-08/Registeration';
+// import Registeration from './components/30-08/Registeration';
 import DynamicCss from './components/30-08/DynamicCss';
 import Reducer from './components/04-09/Reducer';
 import UseMemo from './components/05-09/UseMemo';
@@ -25,6 +25,7 @@ import ParentMemo from './components/11-09/ParentMemo';
 // import UseCallback from './components/15-09/UseCallback';
 import FakestoreApi from './components/14-09/FakestoreApi';
 import Redux from './components/19-09/Redux';
+ 
  
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
     <Routes>
       <Route path="/" element = {<Home />} />s
       <Route path="/login" element = {<Login />} />
-      <Route path="/register" element = {<Register />} />
+      <Route path="/Register" element = {<Register />} />
       <Route path='/counter' element= {<Counter/> }/>
       <Route path='/useEffect1' element= {<UseEffect1/> }/>
       <Route path='/useEffect2' element= {<UseEffect2/> }/>

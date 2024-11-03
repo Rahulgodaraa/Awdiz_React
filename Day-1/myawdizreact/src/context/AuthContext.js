@@ -5,6 +5,8 @@ export const AuthContext = createContext();
 
  const  Reducer = (state , action) => {
     switch(action.type) {
+        case "login" : 
+        return {...state , user : action.payload}
         case "Dark" : 
         return {...state , mode : "dark"}
         case "LightMode" : 
@@ -18,7 +20,7 @@ export const AuthContext = createContext();
     }
  }
 
-  const InitialState = {counter : 0 , mode : 'light'}
+  const InitialState = {counter : 0 , mode : 'light' , user : null}
 
  function ParentAuthComponent( { children }) {
     const [state , dispatch] = useReducer( Reducer , InitialState );

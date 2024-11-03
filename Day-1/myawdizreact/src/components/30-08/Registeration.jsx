@@ -8,7 +8,7 @@ const Registeration = () => {
 
   const router = useNavigate();
 
-  const [userdata , setUserdata] = useState([
+  const [userData , setuserData] = useState([
     {
       name : '',
       email: '',
@@ -18,15 +18,15 @@ const Registeration = () => {
   ])
 
   function handleInput(event){
-    setUserdata({...userdata , [event.target.name]: event.target.value})
-    console.log(userdata);
+    setuserData({...userData , [event.target.name]: event.target.value})
+    console.log(userData);
     
   }
 
   function handleSubmit(event) {
     event.preventDefault();
-    if (userdata.name && userdata.email && userdata.password && userdata.confirmpassword){
-      if (userdata.password !== userdata.confirmpassword) {
+    if (userData.name && userData.email && userData.password && userData.confirmpassword){
+      if (userData.password !== userData.confirmpassword) {
         toast.error("Password does not match");
       } else {
     try {
