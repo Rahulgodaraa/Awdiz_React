@@ -15,6 +15,7 @@ const api = axios.create({
     // baseURL : process.env.DEVBACKENDURL,
     // baseURL : "http://localhost:8000/api/v2"
     baseURL : currentBackendUrl,
+    withCredentials : true,
 })
 
 export default api;

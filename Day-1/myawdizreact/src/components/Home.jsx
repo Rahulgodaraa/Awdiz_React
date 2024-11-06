@@ -29,9 +29,9 @@ function themeChange() {
     }}
     >
       <button onClick={themeChange}>Theme Change</button>
-      <h1>Home</h1>
+      <h1> Welcome {state?.user?.name} to HomePage</h1>
       <h2>Counter : {state?.counter}</h2>
-      <h2>USer : {state?.user?.name}</h2>
+       
 
       <button onClick={Increment}>+</button>
     

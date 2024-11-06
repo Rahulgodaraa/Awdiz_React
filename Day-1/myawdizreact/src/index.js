@@ -10,7 +10,7 @@ import ParentOverallTheme from "./components/11-09/OverallTheme";
 import ParentOverallThemeComponent from "./components/11-09/OverallTheme";
 import {Provider} from 'react-redux'
 import store from "./components/Redux/store";
-
+import { useEffect } from "react";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -43,6 +43,7 @@ root.render(
       />
       <ParentAuthComponent>
       <ParentOverallThemeComponent>
+        
       <App />
       </ParentOverallThemeComponent>
       </ParentAuthComponent>

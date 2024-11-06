@@ -1,4 +1,5 @@
-import {createContext, useReducer} from 'react'
+import {createContext, useEffect, useReducer} from 'react'
+import api from '../axios';
  
 
 export const AuthContext = createContext();
@@ -24,6 +25,21 @@ export const AuthContext = createContext();
 
  function ParentAuthComponent( { children }) {
     const [state , dispatch] = useReducer( Reducer , InitialState );
+
+    useEffect(() => {
+        async function getCurrentUser() {
+    try {
+        const response = await api.post('/auth/getCurrentUser');
+        if(response.data.success) {
+        dispatch({type: 'login' , payload : response.data.userData})
+        }
+    } catch (error) {
+        console.log(error);
+    }
+       }
+       getCurrentUser();
+
+    } , [])
 
     return (
         <AuthContext.Provider value = {{ state , dispatch }}>
